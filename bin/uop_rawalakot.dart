@@ -1,87 +1,36 @@
-import 'dart:io';
-import 'dart:math';
+class Doctor {
 
+  late String name ;
+  late String spe;
+  late int fee;
+  late String clinicAddress;
 
-void drawLine() => print('**********************************');
+  // default constructor
 
-
-void drawLineWithMyChoice( String symbol){
-
-  for( var i = 1; i < 51; i++ ){
-    stdout.write(symbol);
+  // Parameterized
+  Doctor(String n, String s, int f, String add) {
+    name = n;
+    spe = s;
+    fee = f;
+    clinicAddress = add;
   }
 
-  print('');
-}
-
-
-void sum( int a, int b) => print('Sum = ${a+b}');
-
-
-// Positional parameters
-// named parameters
-void table({ required int number,required int range })
-{
-  for( var i = 1; i <= range; i++ )
-  {
-    print('$number X $i = ${number*i}');
+  void display() {
+    print('Name $name');
+    print('Spe: $spe');
+    print('Fee: $fee');
+    print('Address: $clinicAddress');
   }
 }
 
-void multiply({required int number1, int number2 = 1}){
-
-
-  print('Product = ${number1 * number2}');
-}
-
-int square( int number)
-{
-  return number * number;
-}
-
-// int max( int num1, int num2 ){
-//   return ( num1 > num2 ) ? num1 : num2;
-// }
-
-
-// Boss
 void main(){
 
-  print(max(5, 6));
-  print(pow(2, 5));
-  print(min(3, 5));
-  //print(max( 14, 5));
-  //
-  //  int radius = 2;
-  //  print( square(square( square(radius) )) );
+  Doctor doc1 = Doctor( "Bilal", "Gastro", 2500, "Baldia Ada");
+  doc1.display();
 
 
-  //
-  // int result = square(radius);
-  // print( result );
-  //
-  // int result2 = square(result);
-  // print(result2);
+  Doctor doc2 = Doctor( "Zia", "Ent", 3500, "Rawalakot STC");
 
-
-
-
-  // multiply(number1: 8);
-  // multiply(number1: 5, number2: 4);
-  // table( range: 8, number: 7);
-  // drawLine();
-
-  //
-  // drawLine();
-  // sum(5, 7);
-  // sum(87, 98);
-  // drawLineWithMyChoice('#');
-  // drawLineWithMyChoice('>');
-  // drawLine();
-  // print('Main starts');
-  // drawLine();
-  // print('Main Ends');
-  // drawLine();
 }
 
 
