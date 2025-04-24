@@ -1,24 +1,28 @@
 import 'dart:io';
 
 void main(){
-  List<String> shoppingList = [
-    'eggs',
-    'milk',
 
-  ];
+  Map<String, int> playersJersey = {
+    'kohli': 18,
+    'rizwan': 16,
+    'babar': 56,
+  };
 
-  shoppingList.removeAt(0);
+  playersJersey['afridi'] = 10;
+  playersJersey['kohli'] = 88; // update
 
-  shoppingList.add('honey');
-  shoppingList.insert(1, 'tea');
+  print(playersJersey['rizwan']);
 
+  print(playersJersey);
 
-  // Traversing
-  print('*****************************');
-  for ( var item in shoppingList){
-    print(item);
-  }
+  Map<String, dynamic> userInfo = {
+    'name': 'Ali',
+    'rollNo': 1,
+    'uni': 'UOP Rawalakot',
+    'dob': '1st Apr',
+    'isMarried': false,
+    'gpa': 3.3,
+  };
 
-  print(shoppingList.first);
-  print(shoppingList.last);
+  print(userInfo);
 }
