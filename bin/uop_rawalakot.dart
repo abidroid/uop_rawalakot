@@ -1,20 +1,21 @@
 import 'dart:io';
 
 void main(){
+  List<String> shoppingList = [
+    'eggs',
+    'milk',
 
-  int n1, n2;
-  String choice;
+  ];
 
-  do{
-    stdout.write('first nubmer : ');
-    n1 = int.parse( stdin.readLineSync()!);
-    stdout.write('second nubmer : ');
-    n2 = int.parse( stdin.readLineSync()!);
+  shoppingList.removeAt(0);
 
-    print('Sum = ${n1+n2}');
-    stdout.write('More additions(yes/no) ? ');
-    choice = stdin.readLineSync()!;
-  }while( choice == 'yes');
+  shoppingList.add('honey');
+  shoppingList.insert(1, 'tea');
 
-  print("Thanks for using");
+
+  // Traversing
+  print('*****************************');
+  for ( var item in shoppingList){
+    print(item);
+  }
 }
