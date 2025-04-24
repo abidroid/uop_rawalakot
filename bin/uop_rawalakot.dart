@@ -18,4 +18,7 @@ void main(){
   for ( var item in shoppingList){
     print(item);
   }
+
+  print(shoppingList.first);
+  print(shoppingList.last);
 }
