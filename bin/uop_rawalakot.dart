@@ -1,25 +1,12 @@
+
+
 void main(){
 
-  print(5 + 2);
-  print(5 - 2);
-  print(5 * 2);
-   print(5 / 2);
-   print(5.0 ~/ 2);
-   print(5 % 2);
+  int a = 10;
+  int b = 80;
+  int large;
 
-   String firstName = "Ali";
-   String lastName = "Khan";
+  large = (a > b ) ? a : b;
 
-   // string interpolation
-   String fullName = "$firstName $lastName";
-
-   print(fullName);
-
-   int age = 50;
-   print( 'My age is $age' );
-   print('next year i will be ${age+1} years old');
-
-   String? fianceName;
-
-   print(fianceName);
+  print("Large number is $large");
 }
