@@ -1,12 +1,20 @@
-
+import 'dart:io';
 
 void main(){
 
-  int a = 10;
-  int b = 80;
-  int large;
+  int n1, n2;
+  String choice;
 
-  large = (a > b ) ? a : b;
+  do{
+    stdout.write('first nubmer : ');
+    n1 = int.parse( stdin.readLineSync()!);
+    stdout.write('second nubmer : ');
+    n2 = int.parse( stdin.readLineSync()!);
 
-  print("Large number is $large");
+    print('Sum = ${n1+n2}');
+    stdout.write('More additions(yes/no) ? ');
+    choice = stdin.readLineSync()!;
+  }while( choice == 'yes');
+
+  print("Thanks for using");
 }
